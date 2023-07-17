@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/bootstrap';
+
+.card-body > span {
+    font-size: 12px;
+}
+
+.details {
+    font-size: 13px;
+}
+
+.post-crud .invalid-feedback {
+    margin-top: -1rem !important;
+    margin-bottom: 1rem !important;
+}
