@@ -35,7 +35,7 @@ class ProjectSeeder extends Seeder
             $newProject->domain = $faker->domainName();
             $newProject->description = $faker->paragraphs(4, true);
             // $newProject->image = "https://picsum.photos/id/" . rand(0, 1084) . "/200";
-            $imgPath = $faker->image(storage_path('app/public/placeholder'), 600, 900, false);
+            $imgPath = $faker->image(storage_path('app/public/placeholder'), 700, 800, false);
             $newProject->image = 'placeholder/' . $imgPath;
 
             // $newProject->image = "placeholder/sunflower.jpeg";
