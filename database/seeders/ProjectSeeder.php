@@ -60,7 +60,7 @@ class ProjectSeeder extends Seeder
             $newProject->type_id = $types->random()->id;
             // $newProject->stack = $faker->randomElements(['HTML', 'CSS', 'JS', 'PHP', 'LARAVEL', 'VITE', 'VUEJS'], 4);
             $newProject->save();
-            $newProject->technologies()->attach(array_unique($projectTech));
+            $newProject->technologies()->sync(array_unique($projectTech));
         }
     }
 }

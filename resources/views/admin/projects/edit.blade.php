@@ -115,7 +115,7 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
 
-            <input type="submit" class="btn btn-primary form-control my-4" value="ADD PROJECT">
+            <input type="submit" class="btn btn-primary form-control my-4" value="SAVE CHANGES">
 
         </form>
     </div>
