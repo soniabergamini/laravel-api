@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\ContactRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use App\Mail\NewContact;
 
 class ContactRequestController extends Controller
 {
@@ -38,7 +40,8 @@ class ContactRequestController extends Controller
         $newContactRequest->save();
 
         // Send Email
-
+        $newMail = new NewContact($data);
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send($newMail);
 
         // Validation Success
         return response()->json([
